@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="body">
+        <header id="head"><img src="Baner.gif"></header>
+
+        <aside id="left">
+            <p id="bmi"><h2 class="akapit" ><a href="index.html">BMI</a></h2></p>
+            <p id="calc"><h2 class="akapit"><a href="kalkulator.html">Kalkulator</a></h2></p>
+        </aside>
+        <main id="right">
+            <section id="calculator">
+   <label>Waga:<br>
+       <input type="number" id="kg"></label>
+<label>Wzrost:<br>
+    <input type="number" id="cm">
+</label>
+<input type="button" value="Oblicz BMI" id="przycisk">
+</section> 
+
+<p id="wynik">
+
+</p> 
+<p id="display">
+
+</p>
+
+        </main>
+<footer id="foot">
+Autor strony: 000000000000
+</footer>
+    </section>
+    <script>
+        const weight=document.getElementById("kg");
+        const height=document.getElementById("cm");
+        const btn=document.getElementById("przycisk");
+        const equal=document.getElementById("wynik");
+        const display=document.getElementById("display");
+
+btn.addEventListener('click', function(e){
+
+    e.preventDefault();
+    let waga=parseInt(weight.value);
+    let wzrost=parseInt(height.value);
+
+let wynik;
+wynik=waga/((wzrost/100)*(wzrost/100));
+
+
+
+
+equal.innerHTML=`Twoje BMI = ${wynik}`;
+
+if(wynik)
+})
+
+        
+
+    </script>
+</body>
+</html>
